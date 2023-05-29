@@ -87,12 +87,6 @@ const Input = () => {
         setTextValue(newValues);
     }
 
-
-    const sortArrayAscending = () => {
-        const sortedArray = priority.slice().sort((a, b) => a - b);
-        setPriority(sortedArray);
-    };
-
     const increasePriority = (idx) => {
         if (priority[idx] != 1) {
             let newPriority = [...priority]
@@ -100,13 +94,9 @@ const Input = () => {
             let temp = newPriority[idx]
             newPriority[idx] = newPriority[idx - 1]
             newPriority[idx - 1] = temp
-            console.log('priority' + priority[idx] + 'idx' + idx)
-            console.log('priority' + priority)
-            console.log('new priority' + newPriority)
+
             setPriority([...newPriority])
-            console.log('priority' + priority[idx] + 'idx' + idx)
-            console.log('priority' + priority)
-            console.log('new priority' + newPriority)
+
 
         }
     }
@@ -122,15 +112,10 @@ const Input = () => {
             let temp = newPriority[idx]
             newPriority[idx] = newPriority[idx + 1]
             newPriority[idx + 1] = temp
-            console.log(newPriority)
-            console.log('priority' + priority[idx] + 'idx' + idx)
-            console.log('priority' + priority)
-            console.log('new priority' + newPriority)
+
 
             setPriority([...newPriority])
-            console.log('priority' + priority[idx] + 'idx' + idx)
-            console.log('priority' + priority)
-            console.log('new priority' + newPriority)
+
         }
 
     }
@@ -286,10 +271,8 @@ const Input = () => {
 
                         return (
                             <View key={idx}>
-                                {/* <Text>{todoList[idx]}</Text>
-                                <Text>{todoList.length}</Text> */}
                                 <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                    <Text style={styles.pritorityText}>{priority[idx]}</Text>
+                                    <Text style={styles.pritorityText}>{priority[idx]}위</Text>
 
                                     <TouchableOpacity
                                         style={styles.priorityButton}
@@ -297,7 +280,7 @@ const Input = () => {
                                             increasePriority(idx)
                                         }}
                                     >
-                                        <Text style={{ color: 'white', fontSize: '15px' }}>increase</Text>
+                                        <Text style={{ color: 'white', fontSize: 15 }}>increase</Text>
                                     </TouchableOpacity>
 
                                     <TouchableOpacity
@@ -376,7 +359,7 @@ const Input = () => {
 
 const styles = StyleSheet.create({
     pritorityText: {
-        fontSize: '15px',
+        fontSize: 15,
         marginRight: 15,
 
     },
