@@ -25,7 +25,7 @@ expo go
 
 ![QR코드](https://github.com/WAME-LEL/gacha_calculator/assets/56767018/a4257950-8a09-41d3-86c2-3c724611f6aa)
 
-expo go 어플을 이용하여 위의 QR코드를 인식시키면 어플을 실행시킬수 있습니다.
+expo go 어플을 이용하여 위의 QR코드를 인식시키면 어플을 실행시킬수 있습니다.(npx expo start로 expo를 실행시키고 인식시켜야 함)
 
 예시화면
 ---
